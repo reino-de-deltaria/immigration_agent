@@ -1,4 +1,6 @@
 use Mix.Config
 
+import_config "#{Mix.env}.exs"
+
 config :coxir,
- token: "lqOUO5BARwzyRYuMbuQSeB7sCHuPJu8_"
+ token: "NDY3ODA1NDYxNjAxODQ1MjQ4.DiwfAg.l8uP0ZS1qtvvxwMOKuSaCgJPQFQ"
