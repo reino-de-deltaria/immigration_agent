@@ -37,6 +37,8 @@ defmodule ImmigrationAgent.Mixfile do
       {:confex, "~> 3.3"},
       {:veritaserum, "~> 0.2.0"},
       {:gibran, "~> 0.0.2"},
+      {:google_api_storage, "~> 0.1.0"},
+      {:goth, "~> 0.9.0"},
       {:credo, "~> 0.9", only: [:dev, :test]},
       {:ex_doc, "~> 0.18", only: :dev, runtime: false},
       {:coverex, "~> 1.4", only: [:test, :dev]},
