@@ -1,4 +1,4 @@
-defmodule Consumer do
+defmodule ImmigrationAgent.Consumer do
   use Coxir
   require Logger
 

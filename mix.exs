@@ -35,6 +35,8 @@ defmodule ImmigrationAgent.Mixfile do
       {:poolboy, "~> 1.5"},
       {:cachex, "~> 3.0"},
       {:confex, "~> 3.3"},
+      {:veritaserum, "~> 0.2.0"},
+      {:gibran, "~> 0.0.2"},
       {:credo, "~> 0.9", only: [:dev, :test]},
       {:ex_doc, "~> 0.18", only: :dev, runtime: false},
       {:coverex, "~> 1.4", only: [:test, :dev]},

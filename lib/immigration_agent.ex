@@ -7,7 +7,7 @@ defmodule ImmigrationAgent do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(Consumer, []),
+      worker(ImmigrationAgent.Consumer, []),
       worker(Mongo, [[
         name: :mongo,
         database: get_env(:mongodb, :database),
