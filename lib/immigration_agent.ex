@@ -1,12 +1,13 @@
 defmodule ImmigrationAgent do
-  use Application
+  import Application
   use Supervisor
+  import Cachex.Spec
 
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(Consumer, [])
+      worker(Consumer, []),
       worker(Mongo, [[
         name: :mongo,
         database: get_env(:mongodb, :database),

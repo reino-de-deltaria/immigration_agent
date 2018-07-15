@@ -6,8 +6,8 @@ defmodule ImmigrationAgent.Mixfile do
       app: :immigration_agent,
       version: "0.1.0",
       elixir: "~> 1.6.5",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
+      build_embedded: Mix.env == :dev,
+      start_permanent: Mix.env == :dev,
       deps: deps(),
       test_coverage: [tool: Coverex.Task]
     ]
@@ -15,12 +15,8 @@ defmodule ImmigrationAgent.Mixfile do
 
   def application do
     [
-      mod: {ImmigrationAgent, []}
-    ]
-
-    [
       extra_applications:
-      (Mix.env == :dev && [:exsync] || []) ++ [
+      [
         :cachex,
         :logger,
         :poolboy,
@@ -38,7 +34,7 @@ defmodule ImmigrationAgent.Mixfile do
       {:earmark, "~> 1.2"},
       {:poolboy, "~> 1.5"},
       {:cachex, "~> 3.0"},
-      {:exsync, "~> 0.2", only: :dev},
+      {:confex, "~> 3.3"},
       {:credo, "~> 0.9", only: [:dev, :test]},
       {:ex_doc, "~> 0.18", only: :dev, runtime: false},
       {:coverex, "~> 1.4", only: [:test, :dev]},
