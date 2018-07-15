@@ -6,7 +6,7 @@ defmodule ImmigrationAgent.Consumer do
     Logger.info "Message author: #{message.author.username}, content: #{message.content}"
 
     case message.content do
-      "Como consigo minha cidadania?" -> Message.reply(message, "Token aqui: #{oauth_flow}")
+      "Como consigo minha essa grande cidadania?" -> Message.reply(message, NLP.MessageAnalysis.sort_text(message.content))
       _ -> :ignore
     end
 
