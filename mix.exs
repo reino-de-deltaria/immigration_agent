@@ -38,7 +38,7 @@ defmodule ImmigrationAgent.Mixfile do
       {:confex, "~> 3.3"},
       {:veritaserum, "~> 0.2.0"},
       {:oauth2, "~> 0.9.2"},
-      {:gibran, "~> 0.0.2"},
+      {:gibran, git: "https://github.com/abitdodgy/gibran.git"},
       {:google_api_translate, "~> 0.1.0"},
       {:goth, "~> 0.9.0"},
       {:credo, "~> 0.9", only: [:dev, :test]},
